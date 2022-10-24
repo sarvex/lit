@@ -1,0 +1,59 @@
+{
+  "name": "@lit-labs/ssr-react",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Lit SSR integration for React",
+  "main": "index.js",
+  "scripts": {
+    "build": "wireit",
+    "build:ts": "wireit",
+    "test": "wireit"
+  },
+  "wireit": {
+    "build": {
+      "dependencies": [
+        "build:ts"
+      ]
+    },
+    "build:ts": {
+      "command": "tsc --build --pretty",
+      "clean": "if-file-deleted",
+      "dependencies": [],
+      "files": [
+        "src/**/*.ts",
+        "tsconfig.json"
+      ],
+      "output": [
+        "lib/",
+        "index.{d.ts,d.ts.map,js,js.map}",
+        "tsconfig.tsbuildinfo"
+      ]
+    },
+    "test": {
+      "command": "echo \"TODO\"",
+      "dependencies": []
+    }
+  },
+  "files": [
+    "/lib/",
+    "/index.{d.ts,d.ts.map,js,js.map}"
+  ],
+  "author": "Google LLC",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lit/lit.git",
+    "directory": "packages/labs/ssr-react"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@lit-labs/ssr": "^2.2.3"
+  },
+  "engines": {
+    "node": ">=13.9.0"
+  }
+}
