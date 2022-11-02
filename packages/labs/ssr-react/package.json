@@ -22,7 +22,9 @@
     "build:ts": {
       "command": "tsc --build --pretty",
       "clean": "if-file-deleted",
-      "dependencies": [],
+      "dependencies": [
+        "../ssr:build:ts"
+      ],
       "files": [
         "src/**/*.ts",
         "tsconfig.json"
@@ -39,9 +41,16 @@
     }
   },
   "files": [
-    "/lib/",
+    "/node/",
     "/index.{d.ts,d.ts.map,js,js.map}"
   ],
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "node": "./node/index.js",
+      "default": "./index.js"
+    }
+  },
   "author": "Google LLC",
   "license": "BSD-3-Clause",
   "repository": {
