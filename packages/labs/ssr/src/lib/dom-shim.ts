@@ -153,13 +153,13 @@ export const getWindow = ({
     requestAnimationFrame() {},
 
     // Set below
-    window: undefined as unknown,
+    // window: undefined as unknown,
 
     // User-provided globals, like `require`
     ...props,
   };
 
-  window.window = window;
+  // window.window = window;
 
   if (includeJSBuiltIns) {
     Object.assign(window, {
@@ -206,6 +206,6 @@ export const installWindowOnGlobal = (props: {[key: string]: unknown} = {}) => {
     Object.assign(globalThis, window);
     // Set up global reference to window so all globals added to window are
     // added to the node global
-    globalThis.window = globalThis as typeof globalThis & Window;
+    // globalThis.window = globalThis as typeof globalThis & Window;
   }
 };

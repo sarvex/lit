@@ -6,6 +6,7 @@
 
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import type React from 'react';
 
 @customElement('simple-greeter')
 export class SimpleGreeter extends LitElement {

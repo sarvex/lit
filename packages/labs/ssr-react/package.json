@@ -30,7 +30,7 @@
         "tsconfig.json"
       ],
       "output": [
-        "lib/",
+        "node/",
         "index.{d.ts,d.ts.map,js,js.map}",
         "tsconfig.tsbuildinfo"
       ]
