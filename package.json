@@ -65,6 +65,7 @@
         "./packages/labs/scoped-registry-mixin:build",
         "./packages/labs/ssr:build",
         "./packages/labs/ssr-client:build",
+        "./packages/labs/ssr-react:build",
         "./packages/labs/task:build",
         "./packages/labs/testing:build",
         "./packages/labs/virtualizer:build",

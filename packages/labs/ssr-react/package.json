@@ -42,13 +42,24 @@
   },
   "files": [
     "/node/",
-    "/index.{d.ts,d.ts.map,js,js.map}"
+    "/lib/",
+    "/index.{d.ts,d.ts.map,js,js.map}",
+    "/jsx-runtime.{d.ts,d.ts.map,js,js.map}",
+    "/jsx-dev-runtime.{d.ts,d.ts.map,js,js.map}"
   ],
   "exports": {
     ".": {
       "types": "./index.d.ts",
       "node": "./node/index.js",
       "default": "./index.js"
+    },
+    "./jsx-runtime": {
+      "node": "./node/jsx-runtime.js",
+      "default": "./jsx-runtime.js"
+    },
+    "./jsx-dev-runtime": {
+      "node": "./node/jsx-dev-runtime.js",
+      "default": "./jsx-dev-runtime.js"
     }
   },
   "author": "Google LLC",
@@ -60,7 +71,11 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "@lit-labs/ssr": "^2.2.3"
+    "@lit-labs/ssr": "^2.2.3",
+    "lit": "^2.4.1"
+  },
+  "peerDependencies": {
+    "react": ">=17"
   },
   "engines": {
     "node": ">=13.9.0"

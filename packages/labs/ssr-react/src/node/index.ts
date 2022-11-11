@@ -42,18 +42,13 @@ export const patchCreateElement = (createElement: any) => {
 
       if (shadowRootContentIterable) {
         const templateShadowRoot = createElement('template', {
-          shadowRoot: 'open',
+          shadowroot: 'open',
           dangerouslySetInnerHTML: {
             __html: [...shadowRootContentIterable].join(''),
           },
         });
 
-        return createElement(
-          type,
-          {'defer-hydration': '', ...props},
-          templateShadowRoot,
-          ...children
-        );
+        return createElement(type, props, templateShadowRoot, ...children);
       }
     }
     return createElement(type, props, ...children);
