@@ -14,6 +14,8 @@ import {getElementRenderer} from '@lit-labs/ssr/lib/element-renderer.js';
 import {isCustomElement} from '../lib/utils.js';
 import {createElement} from 'react';
 
+console.log('server jsx-dev-runtime');
+
 export const jsxDEV = (
   type: any,
   props: any,

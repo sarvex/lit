@@ -54,3 +54,13 @@ export const patchCreateElement = (createElement: any) => {
     return createElement(type, props, ...children);
   };
 };
+
+import React from 'react';
+
+console.log('server index');
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+React.createElement = patchCreateElement(React.createElement);
+
+export default React;

@@ -5,3 +5,9 @@
  */
 
 export const patchCreateElement = <T>(createElement: T) => createElement;
+
+import React from 'react';
+
+console.log('client index');
+
+export default React;

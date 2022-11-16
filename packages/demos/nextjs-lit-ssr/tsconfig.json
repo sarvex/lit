@@ -15,8 +15,8 @@
     "jsx": "preserve",
     "incremental": true,
     "experimentalDecorators": true,
-    "useDefineForClassFields": false,
-    "jsxImportSource": "@lit-labs/ssr-react"
+    "useDefineForClassFields": false
+    // "jsxImportSource": "@lit-labs/ssr-react"
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

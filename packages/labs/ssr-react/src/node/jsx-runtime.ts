@@ -12,6 +12,8 @@ import * as ReactJSXRuntime from 'react/jsx-runtime';
 import {createElement} from 'react';
 import {isCustomElement} from '../lib/utils.js';
 
+console.log('server jsx-runtime');
+
 export const Fragment = ReactJSXRuntime.Fragment;
 
 export const jsx = (

@@ -5,5 +5,8 @@
  */
 
 import 'lit/experimental-hydrate-support.js';
+
+console.log('client jsx-dev-runtime');
+
 // eslint-disable-next-line import/extensions
 export {jsxDEV} from 'react/jsx-dev-runtime';

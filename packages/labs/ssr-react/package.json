@@ -32,6 +32,8 @@
       "output": [
         "node/",
         "index.{d.ts,d.ts.map,js,js.map}",
+        "jsx-runtime.{d.ts,d.ts.map,js,js.map}",
+        "jsx-dev-runtime.{d.ts,d.ts.map,js,js.map}",
         "tsconfig.tsbuildinfo"
       ]
     },
