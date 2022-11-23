@@ -187,6 +187,7 @@
     "@rollup/plugin-replace": "^4.0.0",
     "@rollup/plugin-virtual": "^2.1.0",
     "@types/chai": "^4.3.1",
+    "@types/estree": "^1.0.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "^16.11.44",
     "@typescript-eslint/eslint-plugin": "^5.20.0",

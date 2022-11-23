@@ -7,12 +7,16 @@
 import '@lit-labs/ssr/lib/install-global-dom-shim.js';
 import {LitElementRenderer} from '@lit-labs/ssr/lib/lit-element-renderer.js';
 import {getElementRenderer} from '@lit-labs/ssr/lib/element-renderer.js';
+import React from 'react';
 
-const isCustomElement = (tagName: string | {}) =>
-  typeof tagName === 'string' && customElements.get(tagName);
+console.log('server index');
+
+const isCustomElement = (tagName: string | {}) => {
+  return typeof tagName === 'string' && customElements.get(tagName);
+};
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const patchCreateElement = (createElement: any) => {
+export function patchCreateElement(createElement: any): any {
   return (type: string | {}, props: {}, ...children: {}[]) => {
     if (isCustomElement(type)) {
       const renderInfo = {
@@ -53,11 +57,7 @@ export const patchCreateElement = (createElement: any) => {
     }
     return createElement(type, props, ...children);
   };
-};
-
-import React from 'react';
-
-console.log('server index');
+}
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore

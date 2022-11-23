@@ -71,7 +71,6 @@
     "url": "https://github.com/lit/lit.git",
     "directory": "packages/labs/ssr-react"
   },
-  "devDependencies": {},
   "dependencies": {
     "@lit-labs/ssr": "^2.2.3",
     "lit": "^2.4.1"

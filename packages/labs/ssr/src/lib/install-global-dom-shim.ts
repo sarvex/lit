@@ -5,4 +5,5 @@
  */
 
 import {installWindowOnGlobal} from './dom-shim.js';
+console.log('dom shim installed');
 installWindowOnGlobal();

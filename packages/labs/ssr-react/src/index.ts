@@ -4,7 +4,11 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-export const patchCreateElement = <T>(createElement: T) => createElement;
+import 'lit/experimental-hydrate-support.js';
+
+export function patchCreateElement<T>(createElement: T) {
+  return createElement;
+}
 
 import React from 'react';
 
