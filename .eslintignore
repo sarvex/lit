@@ -60,6 +60,7 @@ packages/lit-element/lit-element.*
 packages/lit-element/lit.min.*
 packages/lit-element/polyfill-support.*
 packages/lit-element/private-ssr-support.*
+packages/lit-element/node/
 
 packages/lit-html/development/
 packages/lit-html/node/

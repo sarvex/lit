@@ -13,3 +13,4 @@
 /lit.min.*
 /polyfill-support.*
 /private-ssr-support.*
+/node/
