@@ -8,6 +8,10 @@ import '@lit-labs/ssr/lib/install-global-dom-shim.js';
 import {LitElementRenderer} from '@lit-labs/ssr/lib/lit-element-renderer.js';
 import {getElementRenderer} from '@lit-labs/ssr/lib/element-renderer.js';
 import React from 'react';
+import {ReactiveElement} from 'lit';
+if (!('getAttribute' in ReactiveElement.prototype)) {
+  Object.setPrototypeOf(ReactiveElement.prototype, HTMLElement.prototype);
+}
 
 console.log('server index');
 
